@@ -18,9 +18,13 @@ public class PlayerInteract : MonoBehaviour
                 Interactable interactable;
                 hitInfo.transform.TryGetComponent<Interactable>(out interactable);
 
-                if (interactable != null)
+                if (interactable != null && hitInfo.transform.CompareTag("Canvas"))
                 {
                     interactable.InteractionArtStation();
+                }
+                else if(interactable != null && hitInfo.transform.CompareTag("Arcade"))
+                {
+                    interactable.InteractionArcade();
                 }
                 else
                 {
