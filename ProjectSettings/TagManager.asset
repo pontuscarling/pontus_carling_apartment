@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Canvas
   - Arcade
+  - MusicPlayer
   layers:
   - Default
   - TransparentFX

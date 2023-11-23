@@ -31,9 +31,6 @@ public class CameraFollow : MonoBehaviour
     public void StartPainting()
     {
         followScript.offset.Set(0 , 0, 0);
-        
-        
-        
     }
     public void QuitPainting()
     {

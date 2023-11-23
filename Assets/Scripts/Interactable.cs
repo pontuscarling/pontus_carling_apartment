@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Interactable : MonoBehaviour
 {
     private CameraFollow camerafollow;
+    public GameObject vinylPlayer;
 
     private void Start()
     {
@@ -19,12 +21,11 @@ public class Interactable : MonoBehaviour
     {
         SceneManager.LoadScene("VideoGame");
     }
-    /*
-    public void InteractionRadiio()
+    public void InteractionMusic()
     {
-
+        vinylPlayer.SetActive(true);
     }
-    public void InteractionPlant()
+    /*public void InteractionPlant()
     {
 
     }

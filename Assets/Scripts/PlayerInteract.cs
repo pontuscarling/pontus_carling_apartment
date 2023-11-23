@@ -22,9 +22,13 @@ public class PlayerInteract : MonoBehaviour
                 {
                     interactable.InteractionArtStation();
                 }
-                else if(interactable != null && hitInfo.transform.CompareTag("Arcade"))
+                else if (interactable != null && hitInfo.transform.CompareTag("Arcade"))
                 {
                     interactable.InteractionArcade();
+                }
+                else if (interactable != null && hitInfo.transform.CompareTag("MusicPlayer"))
+                {
+                    interactable.InteractionMusic();
                 }
                 else
                 {

@@ -7,7 +7,6 @@ public class FollowCamera : MonoBehaviour
     public Transform target;
     public float targetDistance = 5f;
     public Vector3 offset;
-    
 
     void Start()
     {
