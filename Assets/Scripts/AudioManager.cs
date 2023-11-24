@@ -5,17 +5,15 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public AudioClip[] tracks;
+    public AudioClip clip;
     public AudioSource vinylPlayerAudioSource;
-    bool MusicPlaying;
+    bool musicPlaying;
+    int index;
 
 
     public void SelectTrack(int step)
     {
-        AudioClip clip = tracks[step];   
-        if (MusicPlaying)
-        {
-            vinylPlayerAudioSource.PlayOneShot(clip);
-        }
+        index += step;
         if(step < 0)
         {
             step = 2;
@@ -24,14 +22,24 @@ public class AudioManager : MonoBehaviour
         {
             step = 0;
         }
+
+        Debug.Log("Index: " + index);
+        clip = tracks[index];
     }
    
-    public void PlayMusic(bool playing)
+    public void PlayMusic()
     {
-        if (playing)
+        
+        if (!musicPlaying)
         {
-            MusicPlaying = true;
             Debug.Log("MusicPlaying = true");
+            AudioClip clip = tracks[index];
+            vinylPlayerAudioSource.PlayOneShot(clip);
+            musicPlaying = true;
+        }
+        else 
+        { 
+            musicPlaying = false;
         }
     }
 }

@@ -10,12 +10,12 @@ public class FollowCamera : MonoBehaviour
 
     void Start()
     {
-        offset = new Vector3(0,-2,0);
+        offset = new Vector3(0,0,0);
     }
 
     void Update()
     {
-        Vector3 FollowPosition = target.position + (target.forward + offset) * targetDistance;
+        Vector3 FollowPosition = target.position + (target.forward + offset) * targetDistance;        
         transform.position = FollowPosition;
     }
 }

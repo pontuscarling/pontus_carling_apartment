@@ -34,12 +34,13 @@ public class VinylPlayer : MonoBehaviour
     public void songPicker(int step)
     {
         songIndex += step;
+        Debug.Log("songindex: " + songIndex);
 
-        if (songIndex == 3)
+        if (songIndex > 2)
         {
             songIndex = 0;
         }
-        else if (songIndex == -1)
+        else if (songIndex < 0)
         {
             songIndex = 2;
         }
@@ -48,19 +49,19 @@ public class VinylPlayer : MonoBehaviour
         { 
             albumPosition = 0;
             offset.Set(albumPosition + 960f, 564f, 0);
-            Debug.Log("pos 1");
+            Debug.Log("pos 0");
         }
         else if(songIndex == 1)
         {
             albumPosition = -1275f;
             offset.Set(albumPosition + 960f, 564f, 0);
-            Debug.Log("pos 2");
+            Debug.Log("pos 1");
         }
         else if(songIndex == 2)
         {
             albumPosition = -2550f;
             offset.Set(albumPosition + 960f, 564f, 0);
-            Debug.Log("pos 3");
+            Debug.Log("pos 2");
         }  
     }
 
