@@ -33,12 +33,16 @@ public class AudioManager : MonoBehaviour
         if (!musicPlaying)
         {
             Debug.Log("MusicPlaying = true");
-            AudioClip clip = tracks[index];
-            vinylPlayerAudioSource.PlayOneShot(clip);
+            vinylPlayerAudioSource.clip = tracks[index];
+            //AudioClip clip = tracks[index];
+            vinylPlayerAudioSource.Play(0);
             musicPlaying = true;
+            Debug.Log("Spelar musik");
         }
         else 
-        { 
+        {
+            vinylPlayerAudioSource.Pause();
+            Debug.Log("Musik pausad");
             musicPlaying = false;
         }
     }
