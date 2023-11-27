@@ -2693,10 +2693,10 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359292471}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2713,9 +2713,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.28
-    y: 0.18
-    width: 0.585
+    x: 0
+    y: 0
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 6
@@ -2727,7 +2727,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 863a32499f246b04ab9d0621be2e2667, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -2745,12 +2745,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359292471}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19996412, y: -0.3736123, z: 0.08282785, w: 0.90198}
-  m_LocalPosition: {x: 10, y: 8, z: -9.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.0000000074505797, y: -0.70710677, z: -0.00000001862645, w: 0.7071068}
+  m_LocalPosition: {x: -20.21964, y: 1.2247852, z: 4.323343}
+  m_LocalScale: {x: 0.27173913, y: 0.18621975, z: 7.6923075}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2066588007}
   m_LocalEulerAnglesHint: {x: 25, y: -45, z: 0}
 --- !u!1 &1498990346
 GameObject:
@@ -3784,7 +3784,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 29a55fec9fc1adb4897f3a10c0f63270, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3826,7 +3826,8 @@ Transform:
   m_LocalPosition: {x: 2.4, y: 3.15, z: -24.4}
   m_LocalScale: {x: 0.13, y: 5.37, z: 3.68}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1359292475}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 25}
 --- !u!114 &2066588008
@@ -3842,8 +3843,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brush: {fileID: 5070500500617574834, guid: 1142e3b5661eb4c4a86a799241c88773, type: 3}
+  renderCamera: {fileID: 1359292474}
   brushSize: 0.2
   offset: {x: 1, y: 0.7, z: -1}
+  rTexture: {fileID: 8400000, guid: 863a32499f246b04ab9d0621be2e2667, type: 2}
 --- !u!65 &2066588009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4108,4 +4111,3 @@ SceneRoots:
   - {fileID: 476580138}
   - {fileID: 1079639172}
   - {fileID: 646777544}
-  - {fileID: 1359292475}
