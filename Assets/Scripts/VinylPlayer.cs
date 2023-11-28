@@ -12,10 +12,13 @@ public class VinylPlayer : MonoBehaviour
     public float albumPosition;
     public float speed = 0.15f;
     public Vector3 offset;
+    private float pos1;
+    private float pos2; 
+    
 
     private void Start()
     {
-        offset.Set(960f, 564f, 0);
+        offset.Set(390, 230, 0);
     }
     private void Update()
     {
@@ -31,7 +34,7 @@ public class VinylPlayer : MonoBehaviour
         Vector3 screenPos = cam.WorldToScreenPoint(worldPos);
     }
 
-    public void songPicker(int step)
+    public void SongPicker(int step)
     {
         songIndex += step;
         Debug.Log("songindex: " + songIndex);
@@ -44,23 +47,22 @@ public class VinylPlayer : MonoBehaviour
         {
             songIndex = 2;
         }
-
         if (songIndex == 0) 
         { 
             albumPosition = 0;
-            offset.Set(albumPosition + 960f, 564f, 0);
+            offset.Set(albumPosition + pos1, pos2, 0);
             Debug.Log("pos 0");
         }
         else if(songIndex == 1)
         {
-            albumPosition = -1275f;
-            offset.Set(albumPosition + 960f, 564f, 0);
+            albumPosition = -525f;
+            offset.Set(albumPosition + pos1, pos2, 0);
             Debug.Log("pos 1");
         }
         else if(songIndex == 2)
         {
-            albumPosition = -2550f;
-            offset.Set(albumPosition + 960f, 564f, 0);
+            albumPosition = -1050f;
+            offset.Set(albumPosition + pos1, pos2, 0);
             Debug.Log("pos 2");
         }  
     }
