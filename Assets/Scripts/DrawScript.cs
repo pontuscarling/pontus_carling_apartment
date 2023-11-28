@@ -8,12 +8,15 @@ public class DrawScript : MonoBehaviour
     public GameObject brush;
     LineRenderer lineRenderer;
     Vector2 lastPos;
-    public bool isPainting = false;
+    public bool isPainting = true;
 
     private void Update()
     {
-        if(isPainting)
-        Draw();
+        if (isPainting) 
+        {
+            Draw();
+        }
+        
     }
     public void Draw()
     {

@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour
     }
     public void InteractionArtStation()
     {
-        camerafollow.StartPainting();
+        camerafollow.StartPainting();       
     }
     public void InteractionArcade()
     {

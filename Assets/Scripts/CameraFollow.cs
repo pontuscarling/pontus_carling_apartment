@@ -6,17 +6,15 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform target;    
     public GameObject player;
-    public GameObject artCanvas;
-    public FollowCamera followScript;
+    public GameObject draw;
+    public GameObject paintCanvas;
     public float smoothSpeed = 1f;
     public Vector3 offset;
     
 
     private void Start()
-    {
-        
+    {        
         player = GameObject.Find("Player");
-        followScript = GameObject.Find("ArtCanvas").GetComponent<FollowCamera>();
         target = player.transform;
         offset.Set(5, 4, -5);
     }
@@ -32,14 +30,16 @@ public class CameraFollow : MonoBehaviour
     //flytta dessa funktioner till eget script!!!!!!! 
     public void StartPainting()
     {
-        artCanvas.SetActive(true);
+        draw.SetActive(true);
+        paintCanvas.SetActive(true);
         //followScript.offset.Set(0 , 0, 0);
     }
     public void QuitPainting()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            artCanvas.SetActive(false);
+            draw.SetActive(false);
+            paintCanvas.SetActive(false);
             //followScript.offset.Set(0, -2, 0);
         }
     }
