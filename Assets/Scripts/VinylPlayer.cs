@@ -18,15 +18,19 @@ public class VinylPlayer : MonoBehaviour
 
     private void Start()
     {
-        offset.Set(390, 230, 0);
+        offset.Set(970, 560, 0);
     }
     private void Update()
     {
         //FUL LÖSNING MED OFFSET!!!!! FIXA SÅ ATT WORLDTOSCREEN FUNGERAR!
         TransformWorldToScreenSpace(albums.position);
+        
         Vector3 transition = Vector3.Lerp(albums.position, offset, speed);
         albums.position = transition;
+        
+
         QuitVinylPlayer();
+        
     }
 
     private void TransformWorldToScreenSpace(Vector3 worldPos)
@@ -50,19 +54,19 @@ public class VinylPlayer : MonoBehaviour
         if (songIndex == 0) 
         { 
             albumPosition = 0;
-            offset.Set(albumPosition + pos1, pos2, 0);
+            offset.Set(albumPosition + 970, 560, 0);
             Debug.Log("pos 0");
         }
         else if(songIndex == 1)
         {
-            albumPosition = -525f;
-            offset.Set(albumPosition + pos1, pos2, 0);
+            albumPosition = -1280f;
+            offset.Set(albumPosition + 970, 560, 0);
             Debug.Log("pos 1");
         }
         else if(songIndex == 2)
         {
-            albumPosition = -1050f;
-            offset.Set(albumPosition + pos1, pos2, 0);
+            albumPosition = -2560f;
+            offset.Set(albumPosition + 970, 560, 0);
             Debug.Log("pos 2");
         }  
     }

@@ -9,6 +9,7 @@ TagManager:
   - Canvas
   - Arcade
   - MusicPlayer
+  - Lamp
   layers:
   - Default
   - TransparentFX

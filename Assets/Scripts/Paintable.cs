@@ -15,14 +15,7 @@ public class Paintable : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            renderCamera.enabled = true;
-            /*var Ray = paintCamera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if(Physics.Raycast(Ray, out hit))
-            {
-                var go = Instantiate(brush, hit.point + offset, Quaternion.LookRotation(gameObject.transform.position), transform);
-                go.transform.localScale = Vector3.one * brushSize;
-            }*/
+            renderCamera.enabled = true;            
         }
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
@@ -39,9 +32,10 @@ public class Paintable : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         RenderTexture.active = rTexture;
-        var texture2D = new Texture2D(rTexture.width, rTexture.height);
+        Texture2D texture2D = new Texture2D(rTexture.width, rTexture.height);
         texture2D.ReadPixels(new Rect(0,0, rTexture.width, rTexture.height),0,0);        
         texture2D.Apply();
+        
     }
 
 }

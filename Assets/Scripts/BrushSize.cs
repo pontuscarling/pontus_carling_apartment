@@ -12,8 +12,9 @@ public class BrushSize : MonoBehaviour
 
     public void ChangeSize(float sliderValue)
     {
-        newSize = sliderValue;
-        lineRenderer.SetWidth((0.2f * newSize), (0.3f * newSize));
+        newSize = sliderValue;     
+        lineRenderer.startWidth = (0.2f * newSize);
+        lineRenderer.endWidth = (0.3f * newSize);
     }
 }
 

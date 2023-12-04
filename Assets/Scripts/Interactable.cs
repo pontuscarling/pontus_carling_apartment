@@ -7,11 +7,13 @@ using UnityEngine.SceneManagement;
 public class Interactable : MonoBehaviour
 {
     private CameraFollow camerafollow;
-    public GameObject vinylPlayer;
+    [HideInInspector] public GameObject vinylPlayer;
+    public GameObject lamp;
+    new bool light = false;
 
     private void Start()
     {
-        camerafollow = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
+        camerafollow = GameObject.Find("Main Camera").GetComponent<CameraFollow>();        
     }
     public void InteractionArtStation()
     {
@@ -24,14 +26,19 @@ public class Interactable : MonoBehaviour
     public void InteractionMusic()
     {
         vinylPlayer.SetActive(true);
-    }
-    /*public void InteractionPlant()
+    }    
+    public void InteractionLights()
     {
-
+        if (light)
+        {
+            light = false;
+            lamp.SetActive(false);
+        }
+        else
+        {
+            light = true;
+            lamp.SetActive(true);
+        }
     }
-    public void InteractionComputer()
-    {
-
-    }
-    */
+    
 }

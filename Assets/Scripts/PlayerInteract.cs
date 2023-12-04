@@ -8,8 +8,7 @@ public class PlayerInteract : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
-        {
-            
+        {            
                 RaycastHit hitInfo = new RaycastHit();
                 bool hit = Physics.Raycast(transform.position, transform.forward, out hitInfo, 2f);
                 Debug.DrawRay(transform.position, transform.forward, Color.red, 1);
@@ -21,7 +20,7 @@ public class PlayerInteract : MonoBehaviour
 
                 if (interactable != null && hitInfo.transform.CompareTag("Canvas"))
                 {
-                    interactable.InteractionArtStation();                    
+                    interactable.InteractionArtStation();
                 }
                 else if (interactable != null && hitInfo.transform.CompareTag("Arcade"))
                 {
@@ -30,6 +29,10 @@ public class PlayerInteract : MonoBehaviour
                 else if (interactable != null && hitInfo.transform.CompareTag("MusicPlayer"))
                 {
                     interactable.InteractionMusic();
+                }
+                else if (interactable != null && hitInfo.transform.CompareTag("Lamp"))
+                {                 
+                    interactable.InteractionLights();
                 }
                 else
                 {

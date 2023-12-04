@@ -13,7 +13,6 @@ public class AudioManager : MonoBehaviour
 
     public void SelectTrack(int step)
     {
-        index += step;
         if(step < 0)
         {
             step = 2;
@@ -22,8 +21,17 @@ public class AudioManager : MonoBehaviour
         {
             step = 0;
         }
+        index += step;
+        if (index < 0)
+        {
+            index = 2;
+        }
+        else if (index > 2)
+        {
+            index = 0;
+        }
+        Debug.Log("Index: " + index + "step: " + step);
 
-        Debug.Log("Index: " + index);
         clip = tracks[index];
     }
    
