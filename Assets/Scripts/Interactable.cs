@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 public class Interactable : MonoBehaviour
 {
     private CameraFollow camerafollow;
-    [HideInInspector] public GameObject vinylPlayer;
-    public GameObject lamp;
+    public GameObject vinylPlayer;
+    public Rigidbody rb;
+    [HideInInspector]public GameObject lamp;
     new bool light = false;
 
     private void Start()
@@ -26,6 +27,7 @@ public class Interactable : MonoBehaviour
     public void InteractionMusic()
     {
         vinylPlayer.SetActive(true);
+        rb.isKinematic = true;
     }    
     public void InteractionLights()
     {

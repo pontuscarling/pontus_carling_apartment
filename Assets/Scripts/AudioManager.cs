@@ -31,18 +31,14 @@ public class AudioManager : MonoBehaviour
             index = 0;
         }
         Debug.Log("Index: " + index + "step: " + step);
-
         clip = tracks[index];
     }
    
     public void PlayMusic()
-    {
-        
+    {        
         if (!musicPlaying)
-        {
-            Debug.Log("MusicPlaying = true");
-            vinylPlayerAudioSource.clip = tracks[index];
-            //AudioClip clip = tracks[index];
+        {            
+            vinylPlayerAudioSource.clip = tracks[index];            
             vinylPlayerAudioSource.Play(0);
             musicPlaying = true;
             Debug.Log("Spelar musik");

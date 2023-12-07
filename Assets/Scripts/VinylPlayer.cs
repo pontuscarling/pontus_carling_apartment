@@ -8,12 +8,11 @@ public class VinylPlayer : MonoBehaviour
 {
     public Camera cam;
     public Transform albums;
+    public Rigidbody rb;
     public int songIndex = 0;
     public float albumPosition;
     public float speed = 0.15f;
     public Vector3 offset;
-    private float pos1;
-    private float pos2; 
     
 
     private void Start()
@@ -76,6 +75,7 @@ public class VinylPlayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             gameObject.SetActive(false);
+            rb.isKinematic = false;
         }
     }
 }

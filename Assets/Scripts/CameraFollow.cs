@@ -8,13 +8,16 @@ public class CameraFollow : MonoBehaviour
     public GameObject player;
     public GameObject draw;
     public GameObject paintCanvas;
+    public Rigidbody rb;
     public float smoothSpeed = 1f;
     public Vector3 offset;
     
 
     private void Start()
     {        
+        Time.timeScale = 1f;
         player = GameObject.Find("Player");
+        rb = player.GetComponent<Rigidbody>();
         target = player.transform;
         offset.Set(5, 4, -5);
     }
@@ -32,6 +35,7 @@ public class CameraFollow : MonoBehaviour
     {
         draw.SetActive(true);
         paintCanvas.SetActive(true);
+        rb.isKinematic = true;
         //followScript.offset.Set(0 , 0, 0);
     }
     public void QuitPainting()
@@ -40,6 +44,7 @@ public class CameraFollow : MonoBehaviour
         {
             draw.SetActive(false);
             paintCanvas.SetActive(false);
+            rb.isKinematic = false;
             //followScript.offset.Set(0, -2, 0);
         }
     }

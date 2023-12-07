@@ -7,7 +7,6 @@ public class PauseMenu : MonoBehaviour
 {
     private bool isPaused;
     public GameObject pausePanel;
-
     
     void Update()
     {
@@ -24,7 +23,6 @@ public class PauseMenu : MonoBehaviour
             SceneManager.LoadScene("Room");
         }
     }
-
     public void PauseGame()
     {
         Time.timeScale = 0;
@@ -34,7 +32,7 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        pausePanel?.SetActive(false);
+        pausePanel.SetActive(false);
         isPaused = false;
     }
 }
