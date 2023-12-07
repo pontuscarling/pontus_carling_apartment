@@ -86,7 +86,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0.07812604
-        value: 0.12156907
+        value: 0.25948492
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -95,7 +95,7 @@ LineRenderer:
         outWeight: 0
       - serializedVersion: 3
         time: 0.9780656
-        value: 0.1823536
+        value: 0.3892274
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -107,8 +107,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 0, b: 1, a: 1}
-      key1: {r: 0, g: 0, b: 1, a: 1}
+      key0: {r: 0, g: 0, b: 0, a: 1}
+      key1: {r: 0, g: 0, b: 0, a: 1}
       key2: {r: 0, g: 0.6001611, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -172,5 +172,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 6585482356113716593}
-  newSize: 0.6017669
+  newSize: 1.2844503
   defaultSize: 1
